@@ -56,11 +56,42 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             }
         });
 
-        holder.mtime.setText("Published At: " + newsArticle.getPublishedAt());
-        holder.mauthor.setText(newsArticle.getAuthor());
-        holder.mheading.setText(newsArticle.getTitle());
-        holder.mcontent.setText(newsArticle.getDescription());
-        Glide.with(context).load(newsArticle.getUrlToImage()).into(holder.imageView);
+        if (newsArticle.getPublishedAt() != null) {
+            holder.mtime.setText("Published At: " + newsArticle.getPublishedAt());
+        } else {
+            holder.mtime.setText("");
+        }
+
+        if (newsArticle.getAuthor() != null) {
+            holder.mauthor.setText(newsArticle.getAuthor());
+        } else {
+            holder.mauthor.setText("");
+        }
+
+        if (newsArticle.getTitle() != null) {
+            holder.mheading.setText(newsArticle.getTitle());
+        } else {
+            holder.mheading.setText("");
+        }
+
+        if (newsArticle.getDescription() != null) {
+            holder.mcontent.setText(newsArticle.getDescription());
+        } else {
+            holder.mcontent.setText("");
+        }
+
+        if (newsArticle.getUrlToImage() != null) {
+            holder.imageView.setVisibility(View.VISIBLE);
+            Glide.with(context).load(newsArticle.getUrlToImage()).into(holder.imageView);
+        } else {
+            holder.imageView.setVisibility(View.GONE);
+        }
+
+//        holder.mtime.setText("Published At: " + newsArticle.getPublishedAt());
+//        holder.mauthor.setText(newsArticle.getAuthor());
+//        holder.mheading.setText(newsArticle.getTitle());
+//        holder.mcontent.setText(newsArticle.getDescription());
+//        Glide.with(context).load(newsArticle.getUrlToImage()).into(holder.imageView);
     }
 
     @Override

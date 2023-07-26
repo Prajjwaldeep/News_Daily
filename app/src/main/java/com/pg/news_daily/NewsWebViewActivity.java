@@ -9,16 +9,16 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class NewsWebViewActivity extends AppCompatActivity {
-    Toolbar toolbar;
+//    Toolbar toolbar;
     WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
-        toolbar = findViewById(R.id.toolbar);
+//        toolbar = findViewById(R.id.toolbar);
         webView = findViewById(R.id.webview);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
