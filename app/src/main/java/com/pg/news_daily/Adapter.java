@@ -87,7 +87,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     // Helper method to fetch news data from NewsAPI
     public void fetchNewsData() {
         String apiKey = "1569c1a06cdf4b9f896f688099f2bf1f"; // Replace with your actual API key
-        String url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + apiKey;
+        String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + apiKey;
 
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
