@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     TabItem mhome, mscience, mhealth, mtech, mentertainment, msports;
     PagerAdapter pagerAdapter;
-    Toolbar mtoolbar;
+//    Toolbar mtoolbar;
 
     String api="1569c1a06cdf4b9f896f688099f2bf1f";
 
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mtoolbar=findViewById(R.id.toolbar);
-        setSupportActionBar(mtoolbar);
+//        mtoolbar=findViewById(R.id.toolbar);
+//        setSupportActionBar(mtoolbar);
 
         mhome=findViewById(R.id.home);
         mscience=findViewById(R.id.science);

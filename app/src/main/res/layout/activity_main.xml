@@ -6,17 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="0dp"
-        android:background="@color/white"
-        android:id="@+id/toolbar">
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:id="@+id/toolbar">-->
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp">
+<!--            android:layout_centerInParent="true">-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -27,13 +30,13 @@
                 android:textColor="@color/sky_blue" />
 
         </RelativeLayout>
-    </androidx.appcompat.widget.Toolbar>
+<!--    </androidx.appcompat.widget.Toolbar>-->
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/include"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/relative"
         app:tabTextColor="@color/dark_blue"
         app:tabSelectedTextColor="@color/sky_blue"
         app:tabIndicatorColor="@color/sky_blue"
